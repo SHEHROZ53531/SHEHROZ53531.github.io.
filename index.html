@@ -34,7 +34,6 @@
 </head>
 <body class="text-slate-300 min-h-screen relative overflow-x-hidden">
 
-    <!-- Floating Wireframe Globe Element (Bottom Right) -->
     <div class="fixed bottom-6 right-6 w-32 h-32 md:w-44 md:h-44 opacity-20 pointer-events-none z-0">
         <svg viewBox="0 0 100 100" class="w-full h-full text-purple-500 animate-[spin_20s_linear_infinite]" fill="none" stroke="currentColor" stroke-width="0.5">
             <circle cx="50" cy="50" r="45"></circle>
@@ -44,7 +43,6 @@
         </svg>
     </div>
 
-    <!-- Navigation Bar -->
     <nav class="sticky top-0 z-50 bg-[#0b0c10]/80 backdrop-blur-md border-b border-slate-800/50">
         <div class="max-w-6xl mx-auto px-6 h-20 flex items-center justify-between">
             <div class="flex items-center gap-3">
@@ -63,10 +61,8 @@
         </div>
     </nav>
 
-    <!-- Main Workspace Container -->
     <div class="max-w-5xl mx-auto px-6 relative z-10">
 
-        <!-- HERO SECTION -->
         <section id="hero" class="min-h-[calc(100vh-5rem)] flex flex-col justify-center py-12 md:py-20">
             <div class="grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
                 <div class="md:col-span-7 space-y-6 order-2 md:order-1">
@@ -78,10 +74,9 @@
                         <h2 class="text-4xl sm:text-6xl font-extrabold tracking-tight heading-font text-transparent bg-clip-text bg-gradient-to-r from-pink-500 via-purple-400 to-indigo-400 cursor-blink" id="typing-text"></h2>
                     </div>
                     <p class="text-slate-400 text-base sm:text-lg max-w-xl leading-relaxed">
-                        A Computer Science student who loves diving into AI, Machine Learning and coding![cite: 1]
+                        A Computer Science student who loves diving into AI, Machine Learning and coding!
                     </p>
                     
-                    <!-- Capsule Highlight Tags -->
                     <div class="flex flex-wrap gap-2.5 pt-2">
                         <span class="px-3 py-1 bg-slate-900/90 border border-slate-800 text-slate-400 font-mono text-xs rounded-md">AI / ML Engineer</span>
                         <span class="px-3 py-1 bg-slate-900/90 border border-slate-800 text-slate-400 font-mono text-xs rounded-md">Software Engineer</span>
@@ -89,7 +84,6 @@
                         <span class="px-3 py-1 bg-slate-900/90 border border-slate-800 text-slate-400 font-mono text-xs rounded-md">Proficient in Python • Java • C++ • Dart</span>
                     </div>
 
-                    <!-- Action Buttons & Quick Social Block -->
                     <div class="flex items-center gap-4 pt-4">
                         <a href="#contact" class="px-6 py-3 bg-gradient-to-r from-pink-500 to-purple-600 text-white font-semibold rounded-lg shadow-lg hover:opacity-90 transition text-sm tracking-wide">Contact Me</a>
                         <a href="#projects" class="px-6 py-3 border border-slate-700 hover:border-pink-500 text-slate-300 hover:text-pink-500 font-medium rounded-lg transition text-sm tracking-wide">View Projects</a>
@@ -100,19 +94,16 @@
                         <a href="mailto:shahrozkhalid397@gmail.com" class="hover:text-pink-500 transition"><i class="fas fa-envelope"></i></a>
                     </div>
                 </div>
-                <!-- Profile Image Frame -->
                 <div class="md:col-span-5 flex justify-center order-1 md:order-2">
                     <div class="w-64 h-64 sm:w-80 sm:h-80 rounded-full border-2 border-dashed border-purple-500/40 p-3 relative">
                         <div class="w-full h-full rounded-full overflow-hidden bg-slate-800 border-2 border-pink-500">
-                            <!-- Placeholder image matching layout box, replace src with your photo -->
-                           <img src="my-profile.jpeg" alt="Profile Photograph" class="w-full h-full object-cover grayscale contrast-125">
+                            <img src="my-profile.jpg" alt="Profile Photograph" class="w-full h-full object-cover contrast-125">
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- ABOUT ME SECTION -->
         <section id="about" class="py-20 space-y-10 border-t border-slate-900">
             <div class="text-center space-y-2">
                 <p class="text-xs font-mono text-pink-500 uppercase tracking-widest">Who I Am</p>
@@ -121,15 +112,15 @@
             <div class="grid grid-cols-1 md:grid-cols-12 gap-8 items-center max-w-4xl mx-auto">
                 <div class="md:col-span-4 flex justify-center">
                     <div class="w-48 h-48 rounded-full overflow-hidden border border-purple-500/50 bg-slate-900 shadow-xl">
-                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?fit=crop&w=400&h=400&q=80" alt="About Portrait" class="w-full h-full object-cover grayscale">
+                        <img src="my-profile.jpg" alt="About Portrait" class="w-full h-full object-cover">
                     </div>
                 </div>
                 <div class="md:col-span-8 space-y-4 text-slate-400 text-sm sm:text-base leading-relaxed">
                     <p>
-                        I'm a Computer Science undergraduate with a strong academic foundation and a drive to build technology that solves real-world problems at scale[cite: 1]. Proficient in Python, Java, C++, and Dart, I've led academic projects that sharpened my skills in algorithms, systems design, and database architecture[cite: 1].
+                        I'm a Computer Science undergraduate with a strong academic foundation and a drive to build technology that solves real-world problems at scale. Proficient in Python, Java, C++, and Dart, I've led academic projects that sharpened my skills in algorithms, systems design, and database architecture.
                     </p>
                     <p>
-                        My current focus is on Machine Learning and Artificial Intelligence, and I'm actively exploring these fields through internships, coursework, and hands-on projects[cite: 1]. I'm particularly drawn to how Big Tech companies leverage AI to power global innovation, and I aim to be part of that journey[cite: 1].
+                        My current focus is on Machine Learning and Artificial Intelligence, and I'm actively exploring these fields through internships, coursework, and hands-on projects. I'm particularly drawn to how Big Tech companies leverage AI to power global innovation, and I aim to be part of that journey.
                     </p>
                     <div class="pt-2">
                         <button class="inline-flex items-center gap-2 px-5 py-2.5 bg-purple-600 hover:bg-purple-700 text-white text-sm font-semibold rounded-md transition tracking-wide shadow-md">
@@ -140,14 +131,12 @@
             </div>
         </section>
 
-        <!-- EXPERIENCE SECTION -->
         <section id="experience" class="py-20 space-y-10 border-t border-slate-900">
             <div class="text-center space-y-2">
                 <p class="text-xs font-mono text-pink-500 uppercase tracking-widest">My Journey</p>
                 <h3 class="text-3xl md:text-4xl font-extrabold text-white heading-font tracking-tight">Experience</h3>
             </div>
             <div class="max-w-3xl mx-auto space-y-6">
-                <!-- Card 1 -->
                 <div class="p-6 rounded-xl bg-slate-950/60 neon-border-pink transition duration-300">
                     <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-4">
                         <div>
@@ -163,7 +152,6 @@
             </div>
         </section>
 
-        <!-- EDUCATION SECTION -->
         <section id="education" class="py-20 space-y-10 border-t border-slate-900">
             <div class="text-center space-y-2">
                 <p class="text-xs font-mono text-pink-500 uppercase tracking-widest">Academic Path</p>
@@ -172,24 +160,23 @@
             <div class="max-w-3xl mx-auto space-y-6">
                 <div class="p-6 rounded-xl bg-slate-950/60 border border-slate-800/80 relative overflow-hidden group hover:border-purple-500/40 transition">
                     <div class="absolute top-0 right-0 px-3 py-1 bg-purple-500/10 border-b border-l border-purple-500/30 text-xs font-mono text-purple-400 rounded-bl-lg">
-                        CGPA: 3.48[cite: 1]
+                        CGPA: 3.48
                     </div>
                     <div class="space-y-3">
                         <div class="w-10 h-10 rounded-lg bg-purple-500/10 flex items-center justify-center text-purple-400"><i class="fas fa-graduation-cap"></i></div>
                         <div>
                             <h4 class="text-lg font-bold text-white heading-font">BS Computer Science</h4>
-                            <p class="text-sm text-slate-400">Riphah International University, Islamabad[cite: 1]</p>
-                            <p class="text-xs text-slate-500 font-mono mt-1">2023 - Expected Spring 2027[cite: 1]</p>
+                            <p class="text-sm text-slate-400">Riphah International University, Islamabad</p>
+                            <p class="text-xs text-slate-500 font-mono mt-1">2023 - Expected Spring 2027</p>
                         </div>
                         <p class="text-xs text-slate-400 leading-relaxed pt-2 border-t border-slate-900">
-                            <span class="font-semibold text-slate-300 font-mono">Key Courses:</span> Artificial Intelligence, Cloud Computing, Parallel and Distributed Computing, Computer Networks, Data Structures, Analysis of Algorithms, OOP, Database Systems, System Analysis & Design, Software Engineering, COAL[cite: 1].
+                            <span class="font-semibold text-slate-300 font-mono">Key Courses:</span> Artificial Intelligence, Cloud Computing, Parallel and Distributed Computing, Computer Networks, Data Structures, Analysis of Algorithms, OOP, Database Systems, System Analysis & Design, Software Engineering, COAL.
                         </p>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- PROJECTS SECTION -->
         <section id="projects" class="py-20 space-y-10 border-t border-slate-900">
             <div class="text-center space-y-2">
                 <p class="text-xs font-mono text-pink-500 uppercase tracking-widest">What I've Built</p>
@@ -197,7 +184,6 @@
             </div>
             <div class="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
                 
-                <!-- Project 1: ChurnIQ -->
                 <div class="p-6 rounded-xl bg-slate-950/40 neon-border-purple transition duration-300 flex flex-col justify-between space-y-4">
                     <div class="space-y-3">
                         <div class="flex items-center justify-between">
@@ -205,7 +191,7 @@
                             <span class="text-xs px-2 py-0.5 rounded bg-purple-500/10 border border-purple-500/20 text-purple-400 uppercase font-mono tracking-wider font-semibold">Featured</span>
                         </div>
                         <p class="text-xs text-slate-400 leading-relaxed">
-                            Built an end-to-end ML pipeline using IBM Watson Telco dataset (7,043 records) for churn prediction[cite: 1]. Performed correlation-based feature selection down to 26 key parameters, hitting ~80% accuracy and 0.84 AUC[cite: 1]. Includes real-time JavaScript risk flagging dashboards[cite: 1].
+                            Built an end-to-end ML pipeline using IBM Watson Telco dataset (7,043 records) for churn prediction. Performed correlation-based feature selection down to 26 key parameters, hitting ~80% accuracy and 0.84 AUC. Includes real-time JavaScript risk flagging dashboards.
                         </p>
                     </div>
                     <div class="space-y-3">
@@ -216,12 +202,11 @@
                     </div>
                 </div>
 
-                <!-- Project 2: Smart Quiz -->
                 <div class="p-6 rounded-xl bg-slate-950/40 neon-border-purple transition duration-300 flex flex-col justify-between space-y-4">
                     <div class="space-y-3">
                         <h4 class="text-lg font-bold text-white heading-font">Smart Quiz Mobile Application</h4>
                         <p class="text-xs text-slate-400 leading-relaxed">
-                            Developed a cross-platform mobile quiz application with responsive UI animations and decoupled local evaluation metrics for instant calculations and multi-device support[cite: 1].
+                            Developed a cross-platform mobile quiz application with responsive UI animations and decoupled local evaluation metrics for instant calculations and multi-device support.
                         </p>
                     </div>
                     <div class="space-y-3">
@@ -232,7 +217,6 @@
                     </div>
                 </div>
 
-                <!-- Project 3: Plagiarism Detection -->
                 <div class="p-6 rounded-xl bg-slate-950/40 neon-border-purple transition duration-300 flex flex-col justify-between space-y-4">
                     <div class="space-y-3">
                         <h4 class="text-lg font-bold text-white heading-font">Plagiarism Detection System</h4>
@@ -248,12 +232,11 @@
                     </div>
                 </div>
 
-                <!-- Project 4: Travel Management -->
                 <div class="p-6 rounded-xl bg-slate-950/40 neon-border-purple transition duration-300 flex flex-col justify-between space-y-4">
                     <div class="space-y-3">
                         <h4 class="text-lg font-bold text-white heading-font">Travel & Tourism Backend</h4>
                         <p class="text-xs text-slate-400 leading-relaxed">
-                            Developed a desktop application integrating relational models[cite: 1]. Automated complex backend reservation schemes and customer booking queries through structured optimization layers[cite: 1].
+                            Developed a desktop application integrating relational models. Automated complex backend reservation schemes and customer booking queries through structured optimization layers.
                         </p>
                     </div>
                     <div class="space-y-3">
@@ -267,7 +250,6 @@
             </div>
         </section>
 
-        <!-- SKILLS SLIDER/GRID SECTION -->
         <section id="skills" class="py-20 space-y-10 border-t border-slate-900">
             <div class="text-center space-y-2">
                 <p class="text-xs font-mono text-pink-500 uppercase tracking-widest">My Toolkit</p>
@@ -275,35 +257,32 @@
             </div>
             
             <div class="max-w-3xl mx-auto space-y-8">
-                <!-- Row 1: Concepts -->
                 <div class="space-y-3">
                     <h4 class="text-sm font-semibold tracking-wider uppercase text-purple-400 font-mono text-center md:text-left">Concepts & Framework Core</h4>
                     <div class="grid grid-cols-2 sm:grid-cols-4 gap-3">
-                        <div class="p-3 rounded-lg bg-slate-950 border border-slate-900 text-center text-xs font-medium hover:border-pink-500/30 transition">Artificial Intelligence[cite: 1]</div>
-                        <div class="p-3 rounded-lg bg-slate-950 border border-slate-900 text-center text-xs font-medium hover:border-pink-500/30 transition">Machine Learning[cite: 1]</div>
+                        <div class="p-3 rounded-lg bg-slate-950 border border-slate-900 text-center text-xs font-medium hover:border-pink-500/30 transition">Artificial Intelligence</div>
+                        <div class="p-3 rounded-lg bg-slate-950 border border-slate-900 text-center text-xs font-medium hover:border-pink-500/30 transition">Machine Learning</div>
                         <div class="p-3 rounded-lg bg-slate-950 border border-slate-900 text-center text-xs font-medium hover:border-pink-500/30 transition">Deep Learning</div>
                         <div class="p-3 rounded-lg bg-slate-950 border border-slate-900 text-center text-xs font-medium hover:border-pink-500/30 transition">Agentic AI</div>
                     </div>
                 </div>
 
-                <!-- Row 2: Tech & Languages -->
                 <div class="space-y-3">
                     <h4 class="text-sm font-semibold tracking-wider uppercase text-pink-400 font-mono text-center md:text-left">Languages & Tools</h4>
                     <div class="grid grid-cols-2 sm:grid-cols-4 gap-3">
-                        <div class="p-3 rounded-lg bg-slate-950 border border-slate-900 text-center text-xs font-medium hover:border-purple-500/30 transition"><i class="fab fa-python text-yellow-500 mr-1.5"></i> Python[cite: 1]</div>
-                        <div class="p-3 rounded-lg bg-slate-950 border border-slate-900 text-center text-xs font-medium hover:border-purple-500/30 transition"><i class="fab fa-java text-red-400 mr-1.5"></i> Java[cite: 1]</div>
-                        <div class="p-3 rounded-lg bg-slate-950 border border-slate-900 text-center text-xs font-medium hover:border-purple-500/30 transition">C++[cite: 1]</div>
-                        <div class="p-3 rounded-lg bg-slate-950 border border-slate-900 text-center text-xs font-medium hover:border-purple-500/30 transition"><i class="fas fa-database text-blue-400 mr-1.5"></i> SQL[cite: 1]</div>
-                        <div class="p-3 rounded-lg bg-slate-950 border border-slate-900 text-center text-xs font-medium hover:border-purple-500/30 transition">Dart[cite: 1]</div>
-                        <div class="p-3 rounded-lg bg-slate-950 border border-slate-900 text-center text-xs font-medium hover:border-purple-500/30 transition">Flutter[cite: 1]</div>
+                        <div class="p-3 rounded-lg bg-slate-950 border border-slate-900 text-center text-xs font-medium hover:border-purple-500/30 transition"><i class="fab fa-python text-yellow-500 mr-1.5"></i> Python</div>
+                        <div class="p-3 rounded-lg bg-slate-950 border border-slate-900 text-center text-xs font-medium hover:border-purple-500/30 transition"><i class="fab fa-java text-red-400 mr-1.5"></i> Java</div>
+                        <div class="p-3 rounded-lg bg-slate-950 border border-slate-900 text-center text-xs font-medium hover:border-purple-500/30 transition">C++</div>
+                        <div class="p-3 rounded-lg bg-slate-950 border border-slate-900 text-center text-xs font-medium hover:border-purple-500/30 transition"><i class="fas fa-database text-blue-400 mr-1.5"></i> SQL</div>
+                        <div class="p-3 rounded-lg bg-slate-950 border border-slate-900 text-center text-xs font-medium hover:border-purple-500/30 transition">Dart</div>
+                        <div class="p-3 rounded-lg bg-slate-950 border border-slate-900 text-center text-xs font-medium hover:border-purple-500/30 transition">Flutter</div>
                         <div class="p-3 rounded-lg bg-slate-950 border border-slate-900 text-center text-xs font-medium hover:border-purple-500/30 transition">TensorFlow</div>
-                        <div class="p-3 rounded-lg bg-slate-950 border border-slate-900 text-center text-xs font-medium hover:border-purple-500/30 transition"><i class="fab fa-git-alt text-orange-500 mr-1.5"></i> Git[cite: 1]</div>
+                        <div class="p-3 rounded-lg bg-slate-950 border border-slate-900 text-center text-xs font-medium hover:border-purple-500/30 transition"><i class="fab fa-git-alt text-orange-500 mr-1.5"></i> Git</div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- CONTACT SECTION -->
         <section id="contact" class="py-20 space-y-10 border-t border-slate-900">
             <div class="text-center space-y-2">
                 <p class="text-xs font-mono text-pink-500 uppercase tracking-widest">Get In Touch</p>
@@ -312,18 +291,17 @@
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-12 gap-8 max-w-4xl mx-auto items-start">
-                <!-- Info block -->
                 <div class="md:col-span-5 space-y-4 p-6 rounded-xl bg-slate-950/60 border border-slate-900">
                     <h4 class="text-base font-bold text-white heading-font mb-2">Reach me at</h4>
                     <div class="space-y-3 text-xs sm:text-sm">
                         <a href="https://github.com/SHEHROZ53531" target="_blank" class="flex items-center gap-3 text-slate-400 hover:text-pink-500 transition">
-                            <i class="fab fa-github text-purple-400 w-4"></i> github.com/SHEHROZ53531[cite: 1]
+                            <i class="fab fa-github text-purple-400 w-4"></i> github.com/SHEHROZ53531
                         </a>
                         <a href="https://linkedin.com/in/shahroz-khalid-919262332" target="_blank" class="flex items-center gap-3 text-slate-400 hover:text-pink-500 transition">
-                            <i class="fab fa-linkedin text-purple-400 w-4"></i> linkedin.com/in/shahroz-khalid...[cite: 1]
+                            <i class="fab fa-linkedin text-purple-400 w-4"></i> linkedin.com/in/shahroz-khalid...
                         </a>
                         <a href="mailto:shahrozkhalid397@gmail.com" class="flex items-center gap-3 text-slate-400 hover:text-pink-500 transition">
-                            <i class="fas fa-envelope text-purple-400 w-4"></i> shahrozkhalid397@gmail.com[cite: 1]
+                            <i class="fas fa-envelope text-purple-400 w-4"></i> shahrozkhalid397@gmail.com
                         </a>
                     </div>
                     <div class="pt-2 border-t border-slate-900 flex items-center gap-2 text-xs text-emerald-400 font-mono">
@@ -331,7 +309,6 @@
                     </div>
                 </div>
 
-                <!-- Interactive Form Mockup matching screen frames exactly -->
                 <div class="md:col-span-7 p-6 rounded-xl bg-slate-950/60 border border-slate-900 space-y-4">
                     <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
                         <div class="space-y-1.5">
@@ -356,12 +333,10 @@
 
     </div>
 
-    <!-- Page Footer -->
     <footer class="text-center py-8 border-t border-slate-900 text-[10px] font-mono text-slate-600 relative z-10">
         &copy; 2026 Muhammad Shahroz Khalid. Engineered with custom utility classes.
     </footer>
 
-    <!-- Text Typing Simulation Logic script -->
     <script>
         const words = ["Shahroz Khalid.", "an AI/ML Developer.", "a Software Engineer."];
         let i = 0, timer, txt = document.getElementById("typing-text");
