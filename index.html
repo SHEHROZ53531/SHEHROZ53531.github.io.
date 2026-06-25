@@ -106,6 +106,42 @@
 
         .typing::after { content: '|'; animation: blink 0.9s infinite; color: rgba(255,255,255,0.6); }
         @keyframes blink { 0%, 100% { opacity: 1; } 50% { opacity: 0; } }
+
+        /* Project Card Text */
+        .project-title { font-family: var(--font-display); font-weight: 700; color: #fff; line-height: 1.4; }
+        .featured-badge { position: absolute; top: 16px; right: 16px; font-family: var(--font-mono); font-size: 10px; font-weight: 600; letter-spacing: 0.05em; text-transform: uppercase; color: var(--pink); background: rgba(255,58,130,0.12); border: 1px solid rgba(255,58,130,0.3); padding: 3px 10px; border-radius: 999px; }
+
+        /* Skills Carousel Titles */
+        .skill-cat-title { font-family: var(--font-display); font-size: 1.05rem; letter-spacing: 0.02em; }
+
+        /* Contact Section Layout */
+        .contact-layout { display: grid; grid-template-columns: 1fr; gap: 24px; max-width: 760px; margin: 0 auto; }
+        @media (min-width: 768px) { .contact-layout { grid-template-columns: 0.85fr 1.15fr; gap: 32px; } }
+
+        .contact-info-panel { background: var(--card-bg); border: 1px solid var(--card-border); backdrop-filter: blur(10px); border-radius: 16px; padding: 28px; }
+        .contact-info-item a { color: var(--text-muted); transition: color 0.25s; word-break: break-word; }
+        .contact-info-item a:hover { color: var(--teal); }
+        .contact-info-item i { width: 18px; text-align: center; color: var(--violet); }
+
+        .contact-availability .avail-dot { width: 8px; height: 8px; border-radius: 50%; background: #34d399; box-shadow: 0 0 8px #34d399; display: inline-block; animation: blink 1.6s infinite; }
+
+        .contact-form-card { background: var(--card-bg); border: 1px solid var(--card-border); backdrop-filter: blur(10px); border-radius: 16px; padding: 28px; }
+        .form-input { width: 100%; background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.1); border-radius: 10px; padding: 11px 14px; font-size: 0.875rem; color: #fff; font-family: var(--font-body); transition: border-color 0.25s, background 0.25s; }
+        .form-input::placeholder { color: rgba(255,255,255,0.3); }
+        .form-input:focus { outline: none; border-color: var(--purple); background: rgba(82,51,255,0.06); }
+        textarea.form-input { resize: vertical; min-height: 100px; }
+
+        .submit-btn { width: 100%; display: flex; align-items: center; justify-content: center; gap: 8px; padding: 12px 20px; background: linear-gradient(135deg, var(--pink), var(--purple)); color: #fff; font-weight: 600; font-size: 0.875rem; border: none; border-radius: 10px; cursor: pointer; transition: transform 0.2s, box-shadow 0.2s; }
+        .submit-btn:hover { transform: translateY(-2px); box-shadow: 0 10px 25px rgba(255,58,130,0.25); }
+        .submit-btn:disabled { opacity: 0.6; cursor: not-allowed; transform: none; }
+
+        /* Footer */
+        .site-footer { padding: 32px 24px; border-top: 1px solid rgba(255,255,255,0.06); }
+        .footer-links a { color: var(--text-muted); transition: color 0.25s; }
+        .footer-links a:hover { color: var(--teal); }
+        .footer-social a { transition: color 0.25s, border-color 0.25s; }
+        .footer-social a:hover { color: var(--teal); border-color: rgba(45,212,191,0.3); }
+        .footer-copy { letter-spacing: 0.03em; }
     </style>
 </head>
 <body>
@@ -209,13 +245,13 @@
                 </div>
                 <div class="w-full md:w-2/3 space-y-5 text-slate-300 text-base leading-relaxed text-justify">
                     <p>
-                        I'm a Computer Science undergraduate with a strong academic foundation and a drive to build technology that solves real-world problems at scale. Skilled in building end-to-end applications, I specialize in combining robust logic architectures with responsive client layouts to implement clean product cycles[cite: 5, 6].
+                        I'm a Computer Science undergraduate with a strong academic foundation and a drive to build technology that solves real-world problems at scale. Skilled in building end-to-end applications, I specialize in combining robust logic architectures with responsive client layouts to implement clean product cycles.
                     </p>
                     <p>
-                        My focus extends into intelligent processing infrastructures, explicitly building pipelines spanning Machine Learning models, Sentiment Analysis modules, and system optimizations[cite: 5, 16]. I am consistently engineering layers across Agentic AI frameworks, large language representations (LLMs), and complex application logic patterns[cite: 8].
+                        My focus extends into intelligent processing infrastructures, explicitly building pipelines spanning Machine Learning models, Sentiment Analysis modules, and system optimizations. I am consistently engineering layers across Agentic AI frameworks, large language representations (LLMs), and complex application logic patterns.
                     </p>
                     <div class="pt-2 flex justify-center md:justify-start">
-                        <a href="Shahroz Resume.pdf" download="Shahroz_Resume.pdf" class="px-5 py-2.5 bg-purple-600 hover:bg-purple-700 text-white text-sm font-semibold rounded-lg transition tracking-wide flex items-center gap-2 shadow-md">
+                        <a href="Shahroz_Resume.pdf" download="Shahroz_Resume.pdf" class="px-5 py-2.5 bg-purple-600 hover:bg-purple-700 text-white text-sm font-semibold rounded-lg transition tracking-wide flex items-center gap-2 shadow-md">
                             <i class="fas fa-download text-xs"></i> Grab My Resume
                         </a>
                     </div>
@@ -263,14 +299,14 @@
                         <div class="flex-1 text-center sm:text-left space-y-2">
                             <div class="flex flex-col sm:flex-row justify-between sm:items-center gap-1">
                                 <h3 class="font-bold text-lg text-blue-300 heading-font">BS Computer Science</h3>
-                                <span class="font-mono text-xs text-blue-400 bg-blue-500/10 border border-blue-500/20 px-2.5 py-0.5 rounded-full">Expected Spring 2027 [cite: 12]</span>
+                                <span class="font-mono text-xs text-blue-400 bg-blue-500/10 border border-blue-500/20 px-2.5 py-0.5 rounded-full">Expected Spring 2027</span>
                             </div>
-                            <h4 class="text-white font-semibold text-base">Riphah International University, Islamabad [cite: 11]</h4>
+                            <h4 class="text-white font-semibold text-base">Riphah International University, Islamabad</h4>
                             <p class="text-sm text-slate-400 font-light leading-relaxed">
                                 Core theoretical baseline running through data scaling architectures and discrete system performance layers.
                             </p>
                             <p class="text-xs text-slate-400 pt-2 border-t border-slate-800/80 leading-relaxed">
-                                <span class="font-mono font-bold text-slate-300">Relevant Coursework:</span> Artificial Intelligence, Backend Development, Data Structures, Algorithms[cite: 13].
+                                <span class="font-mono font-bold text-slate-300">Relevant Coursework:</span> Artificial Intelligence, Backend Development, Data Structures, Algorithms.
                             </p>
                         </div>
                     </div>
@@ -291,9 +327,9 @@
                     <span class="featured-badge">Featured</span>
                     <div class="space-y-3">
                         <div class="w-11 h-11 bg-white/5 border border-white/10 rounded-lg flex items-center justify-center text-purple-400 text-lg"><i class="fas fa-chart-line"></i></div>
-                        <h3 class="project-title text-base">ChurnIQ: Customer Churn Prediction [cite: 19, 20]</h3>
+                        <h3 class="project-title text-base">ChurnIQ: Customer Churn Prediction</h3>
                         <p class="text-xs text-slate-400 leading-relaxed">
-                            Built an end-to-end ML pipeline using an IBM Watson dataset (7,043 records)[cite: 21]. Executed matrix conversions using Pandas and NumPy, compressed parameters down to 26 key parameters, and evaluated models to hit an ~80% accuracy and 0.84 AUC[cite: 22, 23, 25]. Contains interactive risk-flagging tracking dashboards[cite: 26].
+                            Built an end-to-end ML pipeline using an IBM Watson dataset (7,043 records). Executed matrix conversions using Pandas and NumPy, compressed parameters down to 26 key parameters, and evaluated models to hit an ~80% accuracy and 0.84 AUC. Contains interactive risk-flagging tracking dashboards.
                         </p>
                     </div>
                     <div class="space-y-3">
@@ -308,14 +344,14 @@
                     <div class="project-card-glow"></div>
                     <div class="space-y-3">
                         <div class="w-11 h-11 bg-white/5 border border-white/10 rounded-lg flex items-center justify-center text-purple-400 text-lg"><i class="fas fa-mobile-alt"></i></div>
-                        <h3 class="project-title text-base">Smart Quiz Mobile Application [cite: 30]</h3>
+                        <h3 class="project-title text-base">Smart Quiz Mobile Application</h3>
                         <p class="text-xs text-slate-400 leading-relaxed">
-                            Engineered a cross-platform mobile application natively mapped via standard state frameworks using Flutter[cite: 31]. Built responsive user interfaces and instant local scoring rules to maximize execution performance[cite: 31].
+                            Engineered a cross-platform mobile application natively mapped via standard state frameworks using Flutter. Built responsive user interfaces and instant local scoring rules to maximize execution performance.
                         </p>
                     </div>
                     <div class="space-y-3">
                         <div class="flex flex-wrap gap-1.5 text-[10px] font-mono text-pink-400">
-                            <span>Flutter</span><span>Dart</span><span>UI/UX Design</span> [cite: 16]
+                            <span>Flutter</span><span>Dart</span><span>UI/UX Design</span>
                         </div>
                         <a href="https://github.com/SHEHROZ53531" target="_blank" class="inline-flex items-center gap-1 text-xs font-mono text-violet-400 hover:text-white transition"><i class="fab fa-github"></i> View on GitHub</a>
                     </div>
@@ -325,9 +361,9 @@
                     <div class="project-card-glow"></div>
                     <div class="space-y-3">
                         <div class="w-11 h-11 bg-white/5 border border-white/10 rounded-lg flex items-center justify-center text-purple-400 text-lg"><i class="fas fa-fingerprint"></i></div>
-                        <h3 class="project-title text-base">Plagiarism Detection System [cite: 41]</h3>
+                        <h3 class="project-title text-base">Plagiarism Detection System</h3>
                         <p class="text-xs text-slate-400 leading-relaxed">
-                            Implemented custom evaluation arrays leveraging the Suffix Array pattern matching engine[cite: 42]. Optimized sorting run routines to reduce text lookup metrics down to an efficient $O(n \log n)$ operation limits[cite: 43].
+                            Implemented custom evaluation arrays leveraging the Suffix Array pattern matching engine. Optimized sorting routines to reduce text lookup time complexity down to an efficient O(n log n).
                         </p>
                     </div>
                     <div class="space-y-3">
@@ -342,14 +378,14 @@
                     <div class="project-card-glow"></div>
                     <div class="space-y-3">
                         <div class="w-11 h-11 bg-white/5 border border-white/10 rounded-lg flex items-center justify-center text-purple-400 text-lg"><i class="fas fa-hotel"></i></div>
-                        <h3 class="project-title text-base">Travel & Tourism Management [cite: 32]</h3>
+                        <h3 class="project-title text-base">Travel & Tourism Management</h3>
                         <p class="text-xs text-slate-400 leading-relaxed">
-                            Designed a high-integrity transactional application equipped with secure driver connectivity mechanisms using Java and SQL[cite: 32, 33]. Automates booking pipelines, transaction structures, and records storage tracking modules cleanly[cite: 34].
+                            Designed a high-integrity transactional application equipped with secure driver connectivity mechanisms using Java and SQL. Automates booking pipelines, transaction structures, and records storage tracking modules cleanly.
                         </p>
                     </div>
                     <div class="space-y-3">
                         <div class="flex flex-wrap gap-1.5 text-[10px] font-mono text-pink-400">
-                            <span>Java</span><span>JDBC</span><span>SQL Server</span> [cite: 16]
+                            <span>Java</span><span>JDBC</span><span>SQL Server</span>
                         </div>
                         <a href="https://github.com/SHEHROZ53531" target="_blank" class="inline-flex items-center gap-1 text-xs font-mono text-violet-400 hover:text-white transition"><i class="fab fa-github"></i> View on GitHub</a>
                     </div>
@@ -372,27 +408,27 @@
                     <div class="skill-category min-w-full flex-shrink-0 space-y-5">
                         <h3 class="skill-cat-title text-center font-bold text-teal-400">Languages & Frameworks</h3>
                         <div class="grid grid-cols-2 sm:grid-cols-4 gap-3">
-                            <div class="skill-card p-4 rounded-xl text-center text-xs font-medium flex flex-col items-center gap-2"><i class="fab fa-python text-lg text-violet-400"></i>Python [cite: 15]</div>
-                            <div class="skill-card p-4 rounded-xl text-center text-xs font-medium flex flex-col items-center gap-2"><i class="fab fa-java text-lg text-violet-400"></i>Java [cite: 15]</div>
-                            <div class="skill-card p-4 rounded-xl text-center text-xs font-medium flex flex-col items-center gap-2"><i class="fas fa-code text-lg text-violet-400"></i>C++ [cite: 15]</div>
-                            <div class="skill-card p-4 rounded-xl text-center text-xs font-medium flex flex-col items-center gap-2"><i class="fas fa-database text-lg text-violet-400"></i>SQL [cite: 15]</div>
-                            <div class="skill-card p-4 rounded-xl text-center text-xs font-medium flex flex-col items-center gap-2"><i class="fas fa-mobile-alt text-lg text-violet-400"></i>Dart [cite: 15]</div>
-                            <div class="skill-card p-4 rounded-xl text-center text-xs font-medium flex flex-col items-center gap-2"><i class="fas fa-cubes text-lg text-violet-400"></i>Flutter [cite: 16]</div>
-                            <div class="skill-card p-4 rounded-xl text-center text-xs font-medium flex flex-col items-center gap-2"><i class="fab fa-html5 text-lg text-violet-400"></i>HTML / CSS [cite: 15]</div>
-                            <div class="skill-card p-4 rounded-xl text-center text-xs font-medium flex flex-col items-center gap-2"><i class="fas fa-bolt text-lg text-violet-400"></i>API Dev [cite: 16]</div>
+                            <div class="skill-card p-4 rounded-xl text-center text-xs font-medium flex flex-col items-center gap-2"><i class="fab fa-python text-lg text-violet-400"></i>Python</div>
+                            <div class="skill-card p-4 rounded-xl text-center text-xs font-medium flex flex-col items-center gap-2"><i class="fab fa-java text-lg text-violet-400"></i>Java</div>
+                            <div class="skill-card p-4 rounded-xl text-center text-xs font-medium flex flex-col items-center gap-2"><i class="fas fa-code text-lg text-violet-400"></i>C++</div>
+                            <div class="skill-card p-4 rounded-xl text-center text-xs font-medium flex flex-col items-center gap-2"><i class="fas fa-database text-lg text-violet-400"></i>SQL</div>
+                            <div class="skill-card p-4 rounded-xl text-center text-xs font-medium flex flex-col items-center gap-2"><i class="fas fa-mobile-alt text-lg text-violet-400"></i>Dart</div>
+                            <div class="skill-card p-4 rounded-xl text-center text-xs font-medium flex flex-col items-center gap-2"><i class="fas fa-cubes text-lg text-violet-400"></i>Flutter</div>
+                            <div class="skill-card p-4 rounded-xl text-center text-xs font-medium flex flex-col items-center gap-2"><i class="fab fa-html5 text-lg text-violet-400"></i>HTML / CSS</div>
+                            <div class="skill-card p-4 rounded-xl text-center text-xs font-medium flex flex-col items-center gap-2"><i class="fas fa-bolt text-lg text-violet-400"></i>API Dev</div>
                         </div>
                     </div>
                     <div class="skill-category min-w-full flex-shrink-0 space-y-5">
                         <h3 class="skill-cat-title text-center font-bold text-teal-400">Core Concepts & AI</h3>
                         <div class="grid grid-cols-2 sm:grid-cols-4 gap-3">
-                            <div class="skill-card p-4 rounded-xl text-center text-xs font-medium flex flex-col items-center gap-2"><i class="fas fa-brain text-lg text-violet-400"></i>Machine Learning [cite: 16]</div>
-                            <div class="skill-card p-4 rounded-xl text-center text-xs font-medium flex flex-col items-center gap-2"><i class="fas fa-robot text-lg text-violet-400"></i>Agentic AI [cite: 16]</div>
-                            <div class="skill-card p-4 rounded-xl text-center text-xs font-medium flex flex-col items-center gap-2"><i class="fas fa-language text-lg text-violet-400"></i>NLP [cite: 16]</div>
-                            <div class="skill-card p-4 rounded-xl text-center text-xs font-medium flex flex-col items-center gap-2"><i class="fas fa-project-diagram text-lg text-violet-400"></i>LLMs [cite: 16]</div>
-                            <div class="skill-card p-4 rounded-xl text-center text-xs font-medium flex flex-col items-center gap-2"><i class="fas fa-sitemap text-lg text-violet-400"></i>Data Structures [cite: 16]</div>
-                            <div class="skill-card p-4 rounded-xl text-center text-xs font-medium flex flex-col items-center gap-2"><i class="fas fa-calculator text-lg text-violet-400"></i>Algorithms [cite: 16]</div>
-                            <div class="skill-card p-4 rounded-xl text-center text-xs font-medium flex flex-col items-center gap-2"><i class="fas fa-network-wired text-lg text-violet-400"></i>System Design [cite: 16]</div>
-                            <div class="skill-card p-4 rounded-xl text-center text-xs font-medium flex flex-col items-center gap-2"><i class="fas fa-chart-pie text-lg text-violet-400"></i>Scikit-learn [cite: 16]</div>
+                            <div class="skill-card p-4 rounded-xl text-center text-xs font-medium flex flex-col items-center gap-2"><i class="fas fa-brain text-lg text-violet-400"></i>Machine Learning</div>
+                            <div class="skill-card p-4 rounded-xl text-center text-xs font-medium flex flex-col items-center gap-2"><i class="fas fa-robot text-lg text-violet-400"></i>Agentic AI</div>
+                            <div class="skill-card p-4 rounded-xl text-center text-xs font-medium flex flex-col items-center gap-2"><i class="fas fa-language text-lg text-violet-400"></i>NLP</div>
+                            <div class="skill-card p-4 rounded-xl text-center text-xs font-medium flex flex-col items-center gap-2"><i class="fas fa-project-diagram text-lg text-violet-400"></i>LLMs</div>
+                            <div class="skill-card p-4 rounded-xl text-center text-xs font-medium flex flex-col items-center gap-2"><i class="fas fa-sitemap text-lg text-violet-400"></i>Data Structures</div>
+                            <div class="skill-card p-4 rounded-xl text-center text-xs font-medium flex flex-col items-center gap-2"><i class="fas fa-calculator text-lg text-violet-400"></i>Algorithms</div>
+                            <div class="skill-card p-4 rounded-xl text-center text-xs font-medium flex flex-col items-center gap-2"><i class="fas fa-network-wired text-lg text-violet-400"></i>System Design</div>
+                            <div class="skill-card p-4 rounded-xl text-center text-xs font-medium flex flex-col items-center gap-2"><i class="fas fa-chart-pie text-lg text-violet-400"></i>Scikit-learn</div>
                         </div>
                     </div>
                 </div>
@@ -435,15 +471,15 @@
                     <form action="#" method="POST" id="contact-form" class="space-y-4">
                         <div class="form-group">
                             <label class="form-label text-xs font-mono text-slate-500 block mb-1">Your Name</label>
-                            <input type="text" placeholder="Shahroz Khalid" class="form-input" required>
+                            <input type="text" id="form-name" name="name" placeholder="Shahroz Khalid" class="form-input" required>
                         </div>
                         <div class="form-group">
                             <label class="form-label text-xs font-mono text-slate-500 block mb-1">Email Address</label>
-                            <input type="email" placeholder="you@example.com" class="form-input" required>
+                            <input type="email" id="form-email" name="email" placeholder="you@example.com" class="form-input" required>
                         </div>
                         <div class="form-group">
                             <label class="form-label text-xs font-mono text-slate-500 block mb-1">Message</label>
-                            <textarea placeholder="What's on your mind?" class="form-input" rows="4" required></textarea>
+                            <textarea id="form-message" name="message" placeholder="What's on your mind?" class="form-input" rows="4" required></textarea>
                         </div>
                         <button type="submit" id="submit-btn" class="submit-btn">
                             <span>Send Message</span>
@@ -473,7 +509,7 @@
                 <a href="https://linkedin.com/in/shahroz-khalid-919262332" target="_blank" class="w-8 h-8 rounded-lg border border-white/10 bg-white/5 flex items-center justify-center hover:text-teal-400 transition"><i class="fab fa-linkedin-in"></i></a>
                 <a href="mailto:shahrozkhalid397@gmail.com" class="w-8 h-8 rounded-lg border border-white/10 bg-white/5 flex items-center justify-center hover:text-teal-400 transition"><i class="fas fa-envelope"></i></a>
             </div>
-            <p class="footer-copy text-[10px] font-mono text-slate-600">&copy; 2026 Muhammad Shahroz Khalid &nbsp;|&nbsp; Reconfigured Pipeline Infrastructure</p>
+            <p class="footer-copy text-[10px] font-mono text-slate-600">&copy; 2026 Muhammad Shahroz Khalid &nbsp;|&nbsp; Built with curiosity, code, and coffee</p>
         </div>
     </footer>
 
@@ -520,6 +556,33 @@
             document.getElementById('menu-btn').addEventListener('click', () => {
                 document.getElementById('mobile-menu').classList.toggle('hidden');
             });
+
+            // Close Mobile Menu When a Nav Link is Clicked
+            document.querySelectorAll('#mobile-menu a').forEach(link => {
+                link.addEventListener('click', () => {
+                    document.getElementById('mobile-menu').classList.add('hidden');
+                });
+            });
+
+            // Contact Form Submission (opens default mail app with prefilled message)
+            const contactForm = document.getElementById('contact-form');
+            if (contactForm) {
+                contactForm.addEventListener('submit', (e) => {
+                    e.preventDefault();
+                    const name = document.getElementById('form-name').value.trim();
+                    const email = document.getElementById('form-email').value.trim();
+                    const message = document.getElementById('form-message').value.trim();
+                    const statusEl = document.getElementById('message-status');
+
+                    const subject = encodeURIComponent(`Portfolio Contact from ${name}`);
+                    const body = encodeURIComponent(`${message}\n\n— ${name} (${email})`);
+                    window.location.href = `mailto:shahrozkhalid397@gmail.com?subject=${subject}&body=${body}`;
+
+                    statusEl.textContent = "Opening your email app...";
+                    statusEl.classList.add('text-emerald-400');
+                    contactForm.reset();
+                });
+            }
 
             // Skills Section Slider
             const row = document.getElementById('skills-row');
